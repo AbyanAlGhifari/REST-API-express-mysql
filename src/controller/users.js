@@ -21,7 +21,7 @@ const createNewUser = async (req, res) => {
     const {body} = req;
 
     if(!body.email || !body.name || !body.address){
-        return res.statur(400).json({
+        return res.status(400).json({
             message: 'Anda mengirimkan data yang salah',
             data: null
         })
@@ -35,7 +35,7 @@ const createNewUser = async (req, res) => {
     })
     } catch (error) {
         res.status(500).json({
-            nessage: 'Server Error',
+            message: 'Server Error',
             serverMessage: error,
         })
     }
